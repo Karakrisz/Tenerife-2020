@@ -1,5 +1,3 @@
-
-
 jQuery(function ($) {
 
 
@@ -30,8 +28,7 @@ jQuery(function ($) {
     $(window).on('scroll', function () {
         if ($(this).scrollTop() >= 250) { // Set position from top to add class
             $('header').addClass('header-appear');
-        }
-        else {
+        } else {
             $('header').removeClass('header-appear');
         }
     });
@@ -54,8 +51,8 @@ jQuery(function ($) {
     if ($(".side-right-btn").length) {
 
         $(".side-right-btn").click(function () {
-            $(".navbar.navbar-right").toggleClass('show');
-        }),
+                $(".navbar.navbar-right").toggleClass('show');
+            }),
             $(".navbar.navbar-right .navbar-nav .nav-link").click(function () {
                 $(".navbar.navbar-right").toggleClass('show');
             });
@@ -107,7 +104,9 @@ jQuery(function ($) {
 
     $(".scroll").on("click", function (event) {
         event.preventDefault();
-        $('html,body').animate({scrollTop: $(this.hash).offset().top - 55}, 700);
+        $('html,body').animate({
+            scrollTop: $(this.hash).offset().top - 55
+        }, 700);
     });
 
 
@@ -130,7 +129,7 @@ jQuery(function ($) {
     });
 
     /*----- Tabs init -----*/
-    if ($(".tab-to-accordion").length){
+    if ($(".tab-to-accordion").length) {
         initTabsToAccordion();
     }
 
@@ -177,6 +176,7 @@ jQuery(function ($) {
                 }
             });
         }
+
         function accordionMode() {
             var liWidth = Math.round(tabsetLi.outerWidth());
             var liCount = tabsetLi.length;
@@ -190,6 +190,7 @@ jQuery(function ($) {
                 tabWrap.removeClass("accordion-mod");
             }
         }
+
         function tabsToggle() {
             tabItem.hide();
             $(activeId).show();
@@ -212,6 +213,7 @@ jQuery(function ($) {
                 }
             });
         }
+
         function hashToggle() {
             var hash = location.hash;
             var activeId = hash;
@@ -238,26 +240,24 @@ jQuery(function ($) {
     $("#blog-slider").owlCarousel({
         items: 1,
         dots: false,
-        autoplay:true,
-        autoplayTimeout:5000,
-        smartSpeed:500,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        smartSpeed: 500,
         nav: false,
         loop: true,
     });
     $("#blog-slider-1").owlCarousel({
         items: 1,
         dots: false,
-        autoplay:true,
-        autoplayTimeout:6000,
-        smartSpeed:600,
+        autoplay: true,
+        autoplayTimeout: 6000,
+        smartSpeed: 600,
         nav: false,
         loop: true,
     });
     /* ===================================
              ends blog slider
        =================================== */
-
-
 
 
     /* ===================================
@@ -319,7 +319,7 @@ jQuery(function ($) {
         cssEase: 'linear',
         fade: true,
         dots: true,
-        arrows:false,
+        arrows: false,
         autoplay: false,
         draggable: false,
         asNavFor: ".client-thumbnails>div",
@@ -331,7 +331,7 @@ jQuery(function ($) {
         slidesToScroll: 1,
         cssEase: 'linear',
         autoplay: true,
-        arrows:false,
+        arrows: false,
         centerMode: true,
         draggable: false,
         focusOnSelect: true,
@@ -344,7 +344,7 @@ jQuery(function ($) {
         dots: true,
         autoplayHoverPause: true,
         autoplay: true,
-        arrows:false,
+        arrows: false,
         mouseDrag: true,
         margin: 30,
         navText: [
@@ -368,17 +368,19 @@ jQuery(function ($) {
     });
 
 
-// Go to Top
-    $(function(){
+    // Go to Top
+    $(function () {
         // Scroll Event
-        $(window).on('scroll', function(){
+        $(window).on('scroll', function () {
             var scrolled = $(window).scrollTop();
             if (scrolled > 600) $('.go-top').addClass('active');
             if (scrolled < 600) $('.go-top').removeClass('active');
         });
         // Click Event
-        $('.go-top').on('click', function() {
-            $("html, body").animate({ scrollTop: "0" },  500);
+        $('.go-top').on('click', function () {
+            $("html, body").animate({
+                scrollTop: "0"
+            }, 500);
         });
     });
 
@@ -387,56 +389,58 @@ jQuery(function ($) {
     /*====================================
                 da-thumb
     *====================================*/
-    $(function() {
+    $(function () {
 
-        $('.da-thumbs > .menu-price ').each( function() { $(this).hoverdir(); } );
+        $('.da-thumbs > .menu-price ').each(function () {
+            $(this).hoverdir();
+        });
 
     });
 
-        // Portfolio three column
-        $('#js-grid-mosaic-flat').cubeportfolio({
-            filters: '#js-filters-mosaic-flat',
-            layoutMode: 'mosaic',
-            defaultFilter: '*',
-            animationType: "scaleSides",
-            gapHorizontal: 0,
-            gapVertical: 0,
-            gridAdjustment: 'responsive',
-            caption: 'zoom',
-            displayType: 'fadeIn',
-            displayTypeSpeed: 100,
-            sortByDimension: true,
-            mediaQueries: [{
-                width: 1500,
-                cols: 3
-            }, {
-                width: 1100,
-                cols: 4
-            }, {
-                width: 768,
-                cols: 2
-            }, {
-                width: 480,
-                cols: 1
-            }, {
-                width: 320,
-                cols: 1
-            }],
+    // Portfolio three column
+    $('#js-grid-mosaic-flat').cubeportfolio({
+        filters: '#js-filters-mosaic-flat',
+        layoutMode: 'mosaic',
+        defaultFilter: '*',
+        animationType: "scaleSides",
+        gapHorizontal: 0,
+        gapVertical: 0,
+        gridAdjustment: 'responsive',
+        caption: 'zoom',
+        displayType: 'fadeIn',
+        displayTypeSpeed: 100,
+        sortByDimension: true,
+        mediaQueries: [{
+            width: 1500,
+            cols: 3
+        }, {
+            width: 1100,
+            cols: 4
+        }, {
+            width: 768,
+            cols: 2
+        }, {
+            width: 480,
+            cols: 1
+        }, {
+            width: 320,
+            cols: 1
+        }],
 
-            // lightbox
-            lightboxDelegate: '.cbp-lightbox',
-            lightboxGallery: true,
-            lightboxTitleSrc: 'data-title',
-            lightboxCounter: '<div class="cbp-popup-lightbox-counter">{{current}} of {{total}}</div>',
+        // lightbox
+        lightboxDelegate: '.cbp-lightbox',
+        lightboxGallery: true,
+        lightboxTitleSrc: 'data-title',
+        lightboxCounter: '<div class="cbp-popup-lightbox-counter">{{current}} of {{total}}</div>',
 
-            plugins: {
-                loadMore: {
-                    element: '#js-loadMore-mosaic-flat',
-                    action: 'click',
-                    loadItems: 3
-                }
+        plugins: {
+            loadMore: {
+                element: '#js-loadMore-mosaic-flat',
+                action: 'click',
+                loadItems: 3
             }
-        })
+        }
+    })
 
 
     /* =====================================
@@ -458,7 +462,9 @@ jQuery(function ($) {
 
         var filterValue = $(this).attr('data-filter');
 
-        $gallery.isotope({filter: filterValue});
+        $gallery.isotope({
+            filter: filterValue
+        });
 
     });
 
@@ -468,7 +474,7 @@ jQuery(function ($) {
 
     });
 
-    setTimeout(function (){
+    setTimeout(function () {
         $('.filtering .active').click();
     }, 1500)
 
@@ -512,20 +518,20 @@ jQuery(function ($) {
                 Medical form
        =================================== */
 
-//
+    //
     $(".datepicker").datepicker({
         dateFormat: 'yy-mm-dd',
         showAnim: 'slideDown'
     });
-//Select-2
+    //Select-2
     $('.js-example-basic-single').select2();
 
 
 
     //blog heading
-    $('.blog-para').on('mouseenter' , function () {
+    $('.blog-para').on('mouseenter', function () {
         $(this).parent().parent().find('.img-blog img').addClass('scale');
-    }).on('mouseleave' , function () {
+    }).on('mouseleave', function () {
         $(this).parent().parent().find('.img-blog img').removeClass('scale');
     });
 
@@ -556,7 +562,7 @@ jQuery(function ($) {
     // });
 
 
-// Team Slider
+    // Team Slider
 
     $("#team-slider").owlCarousel({
         items: 3,
@@ -581,16 +587,16 @@ jQuery(function ($) {
 
 
 
-// Team Slider
+    // Team Slider
 
     $("#team-carousel").owlCarousel({
         items: 1,
         dots: true,
         nav: false,
         autoplay: true,
-        smartSpeed:500,
-        autoplayHoverPause:true,
-        loop:true,
+        smartSpeed: 500,
+        autoplayHoverPause: true,
+        loop: true,
 
         responsive: {
             992: {
@@ -651,7 +657,7 @@ jQuery(function ($) {
         dots: true,
         autoplayHoverPause: true,
         autoplay: true,
-        arrows:false,
+        arrows: false,
         mouseDrag: true,
         margin: 30,
         navText: [
@@ -679,7 +685,7 @@ jQuery(function ($) {
 
 
     //Contact Us
-    $("#submit_btn").click(function() {
+    $("#submit_btn").click(function () {
 
         //disable submit button on click
         $("#submit_btn").attr("disabled", "disabled");
@@ -711,10 +717,15 @@ jQuery(function ($) {
         if (proceed) {
 
             //data to be sent to server
-            post_data = { 'userName': user_name, 'userEmail': user_email, 'userPhone': user_phone, 'userMessage': user_message };
+            post_data = {
+                'userName': user_name,
+                'userEmail': user_email,
+                'userPhone': user_phone,
+                'userMessage': user_message
+            };
 
             //Ajax post data to server
-            $.post('contact.php', post_data, function(response) {
+            $.post('contact.php', post_data, function (response) {
 
                 //load json data from server and output message
                 if (response.type == 'error') {
@@ -736,8 +747,7 @@ jQuery(function ($) {
 
             }, 'json');
 
-        }
-        else {
+        } else {
             output = '<div class="alert-danger" style="padding:10px; margin-bottom:30px;">Please provide the missing fields.</div>';
             $("#result").hide().html(output).slideDown();
 
@@ -753,7 +763,9 @@ jQuery(function ($) {
 
     $(".progress-bar").each(function () {
         $(this).appear(function () {
-            $(this).animate({width: $(this).attr("aria-valuenow") + "%"}, 3000)
+            $(this).animate({
+                width: $(this).attr("aria-valuenow") + "%"
+            }, 3000)
         });
     });
 
@@ -837,7 +849,6 @@ jQuery(function ($) {
     $("#rev_slider_19_1").show().revolution({
         sliderType: "standard",
         jsFileLocation: "//localhost:82/revslider/revslider/public/assets/js/",
-        sliderLayout: "fullscreen",
         dottedOverlay: "none",
         delay: 9000,
         navigation: {
@@ -910,9 +921,9 @@ jQuery(function ($) {
     });
 
 
-        /*==========================================
-        rev slider
-        ============================================*/
+    /*==========================================
+    rev slider
+    ============================================*/
 
     $("#rev_slider_6_1").show().revolution({
         sliderType: "standard",

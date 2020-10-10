@@ -1,0 +1,54 @@
+.position-relative {
+    position: relative;
+}
+
+.pc-pb {
+    padding-bottom: 150px;
+}
+
+.page-color {
+    color: #ff573b;
+}
+
+.navbar-container__p {
+    font-size: 30px;
+}
+
+.left-about__elem {
+    font-size: 23px;
+    color: #ff573b;
+}
+
+.counter__A70-content {
+    display: none;
+}
+
+.counter__button-content__btn--pc-bottom {
+    bottom: 100px;
+}
+
+.icon-block--pc-pb {
+    padding: 60px 0;
+}
+
+.work-section__button-content {
+    padding: 30px 30px 50px;
+}
+
+.work-section--b-color {
+    background-color: #f9f8fa;
+}
+
+.items-img__h1 {
+    color: #ff573b;
+    font-size: 23px;
+}
+
+.navbar-container__p__span--pb {
+    padding-top: 10px;
+}
+
+.blog-image__p {
+    padding-top: 20px;
+    font-size: 23px;
+}
