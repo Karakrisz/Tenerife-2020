@@ -439,7 +439,7 @@ svg {
 .btn.btn-green {
     background: #ff573b;
     border-color: #ff573b;
-    color: #ffffff !important;
+    color: #ffffff;
     -webkit-transition: 1s;
     -o-transition: 1s;
     transition: 1s;
@@ -448,7 +448,7 @@ svg {
 
 .btn.btn-green:hover {
     background: #fff !important;
-    border-color: #fff;
+    border-color: #ff573b;
     color: #161922 !important;
     -webkit-transition: 1s;
     -o-transition: 1s;
@@ -2010,7 +2010,7 @@ Counters Sec
 
 .our-client .logo-item {
     width: 260px;
-    height: 55px;
+    height: 85px;
     line-height: 35px;
     overflow: hidden;
 }
@@ -3906,6 +3906,7 @@ form.findus textarea {
     .hr-line {
         margin-right: auto;
         margin-left: auto;
+        display: none;
     }
 
 

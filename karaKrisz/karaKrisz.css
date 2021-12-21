@@ -6,17 +6,32 @@
     padding-bottom: 150px;
 }
 
+.b-50 {
+    bottom: 50px;
+}
+
 .page-color {
     color: #ff573b;
 }
 
 .navbar-container__p {
     font-size: 30px;
+    margin-top: 10px;
+}
+
+.logo-item__p {
+    font-size: 30px;
+    margin-top: 20px;
 }
 
 .left-about__elem {
     font-size: 23px;
     color: #ff573b;
+    margin-bottom: 20px;
+}
+
+.counter__h2 {
+    font-size: 33px;
 }
 
 .counter__A70-content {
@@ -25,6 +40,13 @@
 
 .counter__button-content__btn--pc-bottom {
     bottom: 100px;
+}
+
+.counter__container__div__p {
+    margin-top: 30px;
+    width: 750px;
+    margin: auto;
+    margin-bottom: 20px;
 }
 
 .icon-block--pc-pb {
@@ -51,4 +73,100 @@
 .blog-image__p {
     padding-top: 20px;
     font-size: 23px;
+}
+
+.blog-text__link {
+    color: #ff573b;
+    font-size: 23px;
+}
+
+.date,
+.date-2 {
+    display: none;
+}
+
+.counter__button-content__btn--color {
+    background-color: white !important;
+    color: #ff5f45 !important;
+}
+
+section,
+.section-padding {
+    padding: 100px 0 80px 0 !important;
+}
+
+.particles-opinions__h3 {
+    color: white;
+    margin: 10px 0;
+}
+
+.particles-opinions__i {
+    color: white;
+}
+
+.particles-version__row {
+    margin-top: 50px;
+    padding: 0 140px 100px 140px;
+}
+
+.particles-opinions__h6 {
+    margin: 10;
+    margin: 20px 0;
+}
+
+.particles-opinions__p--d-none {
+    display: none;
+}
+
+.particles-opinions__p--active {
+    display: block;
+}
+
+.particles-opinions__btn {
+    background: #ee5437;
+    padding: 10px;
+    margin: 10px 0;
+    color: white;
+}
+
+.particles-opinions__btn:hover {
+    background: white;
+    color: #ee5437 !important;
+    border: 1px solid #ee5437;
+    padding: 10px;
+    transition: ease 0.5s;
+}
+
+@media screen and (max-width: 767px) {
+    .fa-wifi {
+        bottom: 5px;
+        margin: 0 5px;
+    }
+
+    .fa-tv {
+        bottom: 4px;
+        margin-left: 5px;
+    }
+
+    .left-about {
+        display: flex;
+        flex-direction: column;
+        margin-top: 70px;
+    }
+
+    .left-about li i {
+        left: 5px;
+    }
+
+    .counter__button-content__btn {
+        margin-bottom: 20px;
+    }
+
+    .counter__container__div__p {
+        width: 100%;
+    }
+
+    .g-background {
+        padding-left: 13px;
+    }
 }
